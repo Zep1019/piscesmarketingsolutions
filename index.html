@@ -20,14 +20,16 @@
             color: white;
             padding: 10px 0;
             display: flex;
-            justify-content: flex-start;  /* Align items to the start */
-            align-items: center;  /* Vertically center items */
-            gap: 20px;
+            justify-content: center;  /* Center the items horizontally */
+            align-items: center;      /* Vertically center items */
+            position: relative;       /* Allows absolute positioning of small logo */
         }
 
         /* Small logo in the top bar */
         .small-logo {
-            width: 40px;  /* Small size for the top bar logo */
+            position: absolute;      /* Position it absolutely within the top bar */
+            left: 20px;               /* Space from the left edge */
+            width: 40px;              /* Small size for the top bar logo */
             height: auto;
         }
 
@@ -46,6 +48,12 @@
         /* Hover effect for the menu buttons */
         .menu-button:hover {
             background-color: #555;
+        }
+
+        /* Styling for the button container */
+        .menu-container {
+            display: flex;
+            gap: 20px;   /* Space between buttons */
         }
 
         /* Content section under the top bar */
@@ -87,12 +95,15 @@
     <div class="top-bar">
         <!-- Small Logo Placeholder in the menu bar -->
         <img src="logo-small-placeholder.png" alt="Logo" class="small-logo">
-        <button class="menu-button">Home</button>
-        <button class="menu-button">About</button>
-        <button class="menu-button">Services</button>
-        <button class="menu-button">Contacts</button>
-        <button class="menu-button">Address</button>
-        <button class="menu-button">Email Address</button>
+        <!-- Container for buttons, centered in the bar -->
+        <div class="menu-container">
+            <button class="menu-button">Home</button>
+            <button class="menu-button">About</button>
+            <button class="menu-button">Services</button>
+            <button class="menu-button">Contacts</button>
+            <button class="menu-button">Address</button>
+            <button class="menu-button">Email Address</button>
+        </div>
     </div>
 
     <!-- Title Section -->
