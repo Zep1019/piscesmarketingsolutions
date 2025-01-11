@@ -51,6 +51,12 @@
             transform: scale(1.1);  /* Slightly enlarge the button */
         }
 
+        /* Deactivate "Home" button (no hover effect) */
+        .menu-button.disabled {
+            background-color: #666;
+            cursor: not-allowed;
+        }
+
         /* Styling for the button container */
         .menu-container {
             display: flex;
@@ -98,12 +104,12 @@
         <img src="logo-small-placeholder.png" alt="Logo" class="small-logo">
         <!-- Container for buttons, centered in the bar -->
         <div class="menu-container">
-            <button class="menu-button" onclick="redirectToHome()">Home</button>
-            <button class="menu-button" onclick="redirectToAbout()">About</button>
-            <button class="menu-button">Services</button>
-            <button class="menu-button">Contacts</button>
-            <button class="menu-button">Address</button>
-            <button class="menu-button">Email Address</button>
+            <button class="menu-button disabled">Home</button>
+            <button class="menu-button" onclick="window.location.href='about.html'">About</button>
+            <button class="menu-button" onclick="window.location.href='services.html'">Services</button>
+            <button class="menu-button" onclick="window.location.href='contacts.html'">Contacts</button>
+            <button class="menu-button" onclick="window.location.href='address.html'">Address</button>
+            <button class="menu-button" onclick="window.location.href='email.html'">Email Address</button>
         </div>
     </div>
 
@@ -115,15 +121,5 @@
         <p>Explore the sections using the menu above!</p>
     </div>
 
-    <script>
-        // JavaScript functions to handle the redirection
-        function redirectToHome() {
-            window.location.href = 'index.html';  // Redirects to the home page
-        }
-
-        function redirectToAbout() {
-            window.location.href = 'about.html';  // Redirects to the about page
-        }
-    </script>
 </body>
 </html>
