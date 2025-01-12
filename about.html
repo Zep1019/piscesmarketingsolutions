@@ -3,83 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us - Pisces Information Website</title>
     <style>
         /* General styling for body and html */
         body, html {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             height: 100%;
+            background-color: #f2f8fc; /* Soft blue background */
+            overflow-x: hidden;
         }
 
         /* Top Navigation Bar */
         .top-bar {
             width: 100%;
-            background-color: #333;
+            background-color: #1f4f68;
             color: white;
-            padding: 10px 0;
+            padding: 15px 0;
             display: flex;
-            justify-content: center;  /* Center the items horizontally */
-            align-items: center;      /* Vertically center items */
-            position: relative;       /* Allows absolute positioning of small logo */
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Small logo in the top bar */
         .small-logo {
-            position: absolute;      /* Position it absolutely within the top bar */
-            left: 20px;               /* Space from the left edge */
-            width: 40px;              /* Small size for the top bar logo */
+            position: absolute;
+            left: 20px;
+            width: 50px;
             height: auto;
+            border-radius: 50%;
         }
 
-        /* Styling for the menu buttons */
+        /* Menu buttons styling */
         .menu-button {
-            background-color: #444;
+            background-color: transparent;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             color: white;
             font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background-color 0.3s, transform 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Hover effect for the menu buttons */
         .menu-button:hover {
-            background-color: #555;
-            transform: scale(1.1);  /* Slightly enlarge the button */
+            background-color: #42a2c0;
+            transform: scale(1.1);
         }
 
-        /* Deactivate "About" button (no hover effect) */
         .menu-button.disabled {
-            background-color: #666;
+            background-color: #1f4f68;
             cursor: not-allowed;
         }
 
-        /* Styling for the button container */
         .menu-container {
             display: flex;
-            gap: 20px;   /* Space between buttons */
+            gap: 20px;
+            animation: wave 2s infinite linear;
         }
 
-        /* Content section under the top bar */
+        @keyframes wave {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Content section */
         .content {
             display: flex;
             flex-direction: column;
-            justify-content: center;  /* Vertically center content */
-            align-items: center;      /* Horizontally center content */
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 50px;
-            background-color: #f5f5f5;
-            height: 100vh;  /* Full height of the viewport */
+            padding: 50px 20px;
+            background-color: #e0f5fb;
+            height: 100vh;
+            background-image: url('water-pattern.png');
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
-        /* Mission and Vision Section */
+        .pisces-icon {
+            width: 150px;
+            height: auto;
+            margin-bottom: 30px;
+            transform: rotate(45deg);
+            animation: rotate-wave 4s infinite linear;
+        }
+
+        @keyframes rotate-wave {
+            0% {
+                transform: rotate(45deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .page-title {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #1f4f68;
+            font-family: 'Georgia', serif;
+        }
+
+        .content p {
+            font-size: 24px;
+            color: #555;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+
         .mission-vision {
             font-size: 24px;
             color: #555;
-            max-width: 800px;  /* Limit the width for readability */
+            max-width: 800px;
             margin-top: 20px;
         }
 
@@ -95,17 +147,64 @@
             line-height: 1.6;
         }
 
-        /* Page Title Styling */
-        .page-title {
-            font-size: 48px;
-            margin-bottom: 30px;
-            color: #333;
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #1f4f68;
+            font-size: 14px;
         }
 
-        /* Styling for the paragraph */
-        .content p {
-            font-size: 24px;
-            color: #555;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 36px;
+                margin-bottom: 15px;
+            }
+
+            .content p {
+                font-size: 18px;
+                padding: 0 10px;
+            }
+
+            .menu-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu-button {
+                font-size: 16px;
+                padding: 10px 20px;
+                width: 100%;
+            }
+
+            .pisces-icon {
+                width: 120px;
+            }
+
+            .content {
+                padding: 30px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .menu-button {
+                padding: 8px 15px;
+            }
+
+            .pisces-icon {
+                width: 100px;
+            }
         }
     </style>
 </head>
@@ -113,9 +212,7 @@
 
     <!-- Top Navigation Bar -->
     <div class="top-bar">
-        <!-- Small Logo Placeholder in the menu bar -->
         <img src="logo-small-placeholder.png" alt="Logo" class="small-logo">
-        <!-- Container for buttons, centered in the bar -->
         <div class="menu-container">
             <button class="menu-button" onclick="window.location.href='index.html'">Home</button>
             <button class="menu-button disabled">About</button>
@@ -126,10 +223,11 @@
         </div>
     </div>
 
-    <!-- Title Section -->
+    <!-- Content Section -->
     <div class="content">
+        <img src="pisces-icon-placeholder.png" alt="Pisces Icon" class="pisces-icon">
         <h1 class="page-title">Our Mission and Vision</h1>
-        
+
         <div class="mission-vision">
             <h2>Our Mission</h2>
             <p>Our mission is to provide the most reliable, accurate, and up-to-date information to our users. We aim to be the leading source of knowledge in our industry, helping individuals make informed decisions through clear and accessible content.</p>
@@ -139,13 +237,10 @@
         </div>
     </div>
 
-    <script>
-        // Example: You could add a function to toggle the "disabled" class on the About button when needed
-        function toggleAboutButton() {
-            const aboutButton = document.querySelector('.menu-button.disabled');
-            aboutButton.classList.toggle('disabled');
-        }
-    </script>
+    <!-- Footer -->
+    <div class="footer">
+        <p>Designed with love & water for Pisces enthusiasts</p>
+    </div>
 
 </body>
 </html>
