@@ -37,6 +37,8 @@
         .menu-container {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap; /* Allow the items to wrap if necessary */
+            justify-content: center; /* Center the items horizontally */
         }
 
         .menu-button {
@@ -110,14 +112,14 @@
         /* Media Queries for responsiveness */
         @media screen and (max-width: 768px) {
             .menu-container {
-                flex-direction: column;  /* Stack items vertically */
-                align-items: center;
+                flex-direction: row;  /* Ensure the buttons are in a row */
+                justify-content: center;  /* Align buttons to the center */
             }
 
             .menu-button {
-                width: 100%;  /* Make buttons fill the width */
-                padding: 15px;
-                margin: 5px 0;  /* Add space between buttons */
+                width: auto;  /* Set button width to auto for smaller screens */
+                padding: 10px 15px;
+                margin: 5px;
             }
 
             .content {
