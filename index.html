@@ -22,8 +22,8 @@
             color: white;
             padding: 15px 0;
             display: flex;
-            justify-content: center;  /* Center the items horizontally */
-            align-items: center;      /* Vertically center items */
+            justify-content: space-between; /* Spread out the items */
+            align-items: center;
             position: relative;
         }
 
@@ -37,8 +37,6 @@
         .menu-container {
             display: flex;
             gap: 20px;
-            flex-wrap: wrap; /* Allow the items to wrap if necessary */
-            justify-content: center; /* Center the items horizontally */
         }
 
         .menu-button {
@@ -109,34 +107,61 @@
             font-size: 0.9rem;
         }
 
+        /* Hamburger menu (only visible on small screens) */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .hamburger-line {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        /* Slide-in menu */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hidden by default */
+            width: 250px;
+            height: 100%;
+            background-color: #2E3B4E;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            transition: left 0.3s ease;
+        }
+
+        .side-menu a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 15px 0;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .side-menu a:hover {
+            background-color: #4A5C72;
+        }
+
         /* Media Queries for responsiveness */
         @media screen and (max-width: 768px) {
             .menu-container {
-                flex-direction: row;  /* Ensure the buttons are in a row */
-                justify-content: center;  /* Align buttons to the center */
+                display: none; /* Hide the default horizontal menu on small screens */
             }
 
-            .menu-button {
-                width: auto;  /* Set button width to auto for smaller screens */
-                padding: 10px 15px;
-                margin: 5px;
-            }
-
-            .content {
-                padding: 20px;  /* Less padding for smaller screens */
-            }
-
-            .page-title {
-                font-size: 2rem;
-            }
-
-            .welcome-text {
-                font-size: 1rem;
-                margin: 20px 0;
-            }
-
-            .pisces-icon {
-                width: 120px;  /* Smaller icon on mobile */
+            .hamburger-menu {
+                display: flex; /* Show hamburger menu on small screens */
             }
         }
     </style>
@@ -146,6 +171,15 @@
     <!-- Top Navigation Bar -->
     <div class="top-bar">
         <img src="logo-small-placeholder.png" alt="Logo" class="small-logo">
+        
+        <!-- Hamburger Menu (appears on small screens) -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+
+        <!-- Default Menu (will be hidden on mobile) -->
         <div class="menu-container">
             <button class="menu-button" onclick="window.location.href='index.html'">Home</button>
             <button class="menu-button" onclick="window.location.href='about.html'">About</button>
@@ -156,9 +190,19 @@
         </div>
     </div>
 
+    <!-- Side Menu (hidden by default) -->
+    <div class="side-menu" id="sideMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="address.html">Address</a>
+        <a href="email.html">Email Address</a>
+    </div>
+
     <!-- Content Section -->
     <div class="content">
-        <img src="pisces-icon.png" alt="Pisces Icon" class="pisces-icon"> <!-- Pisces Icon without spinning -->
+        <img src="pisces-icon.png" alt="Pisces Icon" class="pisces-icon">
         <h1 class="page-title">Welcome to Pisces Information Website</h1>
         <div class="welcome-text">
             <p>Welcome to our Pisces-themed platform. We offer a variety of services and resources catered to the astrological and spiritual needs of those born under the Pisces zodiac sign. Dive into the world of Pisces and discover the information, guidance, and connections you're seeking.</p>
@@ -170,6 +214,18 @@
     <div class="footer">
         <p>Designed with love & water for Pisces enthusiasts</p>
     </div>
+
+    <!-- Script for toggling the menu -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('sideMenu');
+            if (menu.style.left === '-250px') {
+                menu.style.left = '0';
+            } else {
+                menu.style.left = '-250px';
+            }
+        }
+    </script>
 
 </body>
 </html>
