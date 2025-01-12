@@ -55,7 +55,23 @@
             cursor: not-allowed;
         }
 
-        /* Content section */
+        /* Logo Section in Body */
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center items vertically */
+            align-items: center;     /* Center items horizontally */
+            height: 100vh;           /* Full viewport height to center in the middle */
+            text-align: center;      /* Center the text */
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;     /* Space between logo and title */
+        }
+
+        /* Content Section */
         .content {
             display: flex;
             flex-direction: column;
@@ -65,14 +81,6 @@
             padding: 50px;
             background-color: #fff;
             min-height: 70vh;
-        }
-
-        /* Pisces Icon */
-        .pisces-icon {
-            width: 150px;
-            height: auto;
-            margin-bottom: 30px;
-            opacity: 0.8;
         }
 
         /* Page title styling */
