@@ -5,8 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Pisces Information Website</title>
     <style>
-        /* Similar styles as the other pages */
-        /* ... */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            background-color: #f2f8fc;
+            overflow-x: hidden;
+        }
+
+        .top-bar {
+            width: 100%;
+            background-color: #1f4f68;
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .small-logo {
+            position: absolute;
+            left: 20px;
+            width: 50px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .menu-button {
+            background-color: transparent;
+            border: none;
+            padding: 12px 25px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .menu-button:hover {
+            background-color: #42a2c0;
+            transform: scale(1.1);
+        }
+
+        .menu-button.disabled {
+            background-color: #1f4f68;
+            cursor: not-allowed;
+        }
+
+        .menu-container {
+            display: flex;
+            gap: 20px;
+            animation: wave 2s infinite linear;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #e0f5fb;
+            height: 100vh;
+            background-image: url('water-pattern.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pisces-icon {
+            width: 150px;
+            height: auto;
+            margin-bottom: 30px;
+            transform: rotate(45deg);
+            animation: rotate-wave 4s infinite linear;
+        }
+
+        @keyframes rotate-wave {
+            0% {
+                transform: rotate(45deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .page-title {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #1f4f68;
+            font-family: 'Georgia', serif;
+        }
+
+        .content p {
+            font-size: 24px;
+            color: #555;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+
+        .mission-vision {
+            font-size: 24px;
+            color: #555;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+
+        .mission-vision h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .mission-vision p {
+            font-size: 20px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #1f4f68;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 36px;
+                margin-bottom: 15px;
+            }
+
+            .content p {
+                font-size: 18px;
+                padding: 0 10px;
+            }
+
+            .menu-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu-button {
+                font-size: 16px;
+                padding: 10px 20px;
+                width: 100%;
+            }
+
+            .pisces-icon {
+                width: 120px;
+            }
+
+            .content {
+                padding: 30px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .menu-button {
+                padding: 8px 15px;
+            }
+
+            .pisces-icon {
+                width: 100px;
+            }
+        }
     </style>
 </head>
 <body>
