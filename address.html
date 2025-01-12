@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Address - Pisces Marketing Solutions</title>
+    <title>Email - Pisces Marketing Solutions</title>
     <style>
         /* General styles for the whole website */
         body, html {
@@ -119,8 +119,8 @@
             }
 
             .menu-button {
-                padding: 15px;
-                font-size: 16px;
+                padding: 10px 15px;
+                font-size: 14px;
             }
 
             .content {
@@ -140,30 +140,49 @@
                 width: 120px;  /* Smaller icon on mobile */
             }
         }
+
+        @media screen and (max-width: 480px) {
+            .menu-button {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+
+            .content {
+                padding: 10px;  /* Even less padding for very small screens */
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .mission-vision {
+                font-size: 0.9rem;
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- Top Navigation Bar -->
     <div class="top-bar">
-        
         <div class="menu-container">
             <button class="menu-button" onclick="window.location.href='index.html'">Home</button>
             <button class="menu-button" onclick="window.location.href='about.html'">About</button>
             <button class="menu-button" onclick="window.location.href='services.html'">Services</button>
             <button class="menu-button" onclick="window.location.href='contacts.html'">Contacts</button>
-            <button class="menu-button disabled">Address</button>
-            <button class="menu-button" onclick="window.location.href='email.html'">Email Address</button>
+            <button class="menu-button" onclick="window.location.href='address.html'">Address</button>
+            <button class="menu-button disabled">Email Address</button>
         </div>
     </div>
 
     <!-- Content Section -->
     <div class="content">
-        <h1 class="page-title">Our Address</h1>
+        <h1 class="page-title">Email Us</h1>
         <div class="mission-vision">
-            <h2>Visit Us At:</h2>
-            <p>Our headquarters is located at: <strong>123 Pisces Avenue, Ocean City, Pacifica, 12345.</strong> Feel free to drop by for a chat or visit our offices during business hours.</p>
-            <p>Office hours: Monday to Friday, from <strong>9:00 AM to 5:00 PM</strong>.</p>
+            <p>If you have any inquiries or feedback, feel free to email us at the following email address:</p>
+            <h2><strong>support@piscesinfo.com</strong></h2>
+            <p>We will get back to you as soon as possible. Thank you for reaching out to us!</p>
         </div>
     </div>
 
