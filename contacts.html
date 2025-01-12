@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Pisces Information Website</title>
+    <title>Contacts - Pisces Marketing Solutions</title>
     <style>
         /* General styles for the whole website */
         body, html {
@@ -27,16 +27,12 @@
             position: relative;
         }
 
-        .small-logo {
-            position: absolute;
-            left: 20px;
-            width: 40px;
-            height: auto;
-        }
-
         .menu-container {
             display: flex;
             gap: 20px;
+            overflow-x: auto; /* Allow horizontal scrolling on mobile */
+            white-space: nowrap; /* Prevent line breaks between buttons */
+            padding: 0 10px; /* Add some padding for mobile */
         }
 
         .menu-button {
@@ -71,6 +67,14 @@
             min-height: 70vh;
         }
 
+        /* Pisces Icon */
+        .pisces-icon {
+            width: 150px;
+            height: auto;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
         /* Page title styling */
         .page-title {
             font-size: 3rem;
@@ -78,7 +82,7 @@
             color: #2E3B4E;
         }
 
-        /* Contact Information */
+        /* Services Section */
         .mission-vision {
             font-size: 1.1rem;
             color: #555;
@@ -91,25 +95,6 @@
             font-size: 2rem;
             color: #1E2A38;
             margin-bottom: 10px;
-        }
-
-        .mission-vision ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .mission-vision li {
-            margin: 10px 0;
-        }
-
-        .mission-vision a {
-            color: #1E2A38;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .mission-vision a:hover {
-            color: #4A5C72;
         }
 
         /* Footer */
@@ -127,14 +112,15 @@
         /* Media Queries for responsiveness */
         @media screen and (max-width: 768px) {
             .menu-container {
-                flex-direction: column;  /* Stack items vertically */
-                align-items: center;
+                flex-direction: row;  /* Keep items horizontal */
+                justify-content: flex-start;  /* Align items to the start */
+                padding: 0 10px; /* Padding for mobile */
+                overflow-x: auto;  /* Horizontal scroll if needed */
             }
 
             .menu-button {
-                width: 100%;  /* Make buttons fill the width */
                 padding: 15px;
-                margin: 5px 0;  /* Add space between buttons */
+                font-size: 16px;
             }
 
             .content {
@@ -148,6 +134,10 @@
             .mission-vision {
                 font-size: 1rem;
                 margin: 20px 0;
+            }
+
+            .pisces-icon {
+                width: 120px;  /* Smaller icon on mobile */
             }
         }
     </style>
