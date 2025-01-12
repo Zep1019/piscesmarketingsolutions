@@ -5,161 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Pisces Information Website</title>
     <style>
-        /* General styles for body and html */
+        /* General styles for the whole website */
         body, html {
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
+            background-color: #E0F7FA; /* Soft Pisces-inspired background color */
             height: 100%;
-            background-color: #E0F7FA; /* Pisces-inspired background color */
-            overflow-x: hidden;
+            box-sizing: border-box;
         }
 
         /* Top Navigation Bar */
         .top-bar {
             width: 100%;
-            background-color: #00796B; /* Pisces-themed dark teal */
+            background-color: #00796B; /* Dark teal for the top bar */
             color: white;
-            padding: 15px 0;
+            padding: 12px 0; /* Adjusted padding */
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .small-logo {
-            position: absolute;
-            left: 20px;
-            width: 50px;
-            height: auto;
-            border-radius: 50%;
-        }
-
-        .menu-button {
-            background-color: transparent;
-            border: none;
-            padding: 12px 25px;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .menu-button:hover {
-            background-color: #42a2c0;
-            transform: scale(1.1);
-        }
-
-        .menu-button.disabled {
-            background-color: #00796B; /* Disabled color for Home button */
-            cursor: not-allowed;
+            z-index: 100;
         }
 
         .menu-container {
             display: flex;
-            gap: 20px;
+            gap: 12px; /* Reduced gap for compactness */
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 6px 0; /* Reduced padding */
         }
 
-        /* Content section */
+        .menu-button {
+            background-color: #00897B; /* Lighter teal for buttons */
+            border: none;
+            padding: 12px 20px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .menu-button:hover {
+            background-color: #004D40; /* Darker teal for hover effect */
+        }
+
+        .menu-button.disabled {
+            background-color: #B0BEC5; /* Disabled state color */
+            cursor: not-allowed;
+        }
+
+        /* Logo Section in Body */
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            background-color: #ffffff; /* White background for logo section */
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .logo-section h1 {
+            font-size: 3rem;
+            color: #00796B; /* Teal color for the header */
+            margin-top: 0;
+        }
+
+        /* Content Section */
         .content {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 50px 20px;
+            padding: 50px;
             background-color: #ffffff; /* White background for content */
             min-height: 70vh;
-            background-image: url('water-pattern.png'); /* Add your own water-themed image */
-            background-repeat: no-repeat;
-            background-size: cover;
+            border-top: 2px solid #00796B; /* Subtle border for separation */
         }
 
-        .page-title {
-            font-size: 50px;
-            margin-bottom: 20px;
-            color: #00796B; /* Teal header color */
-            font-family: 'Georgia', serif;
+        .content h2 {
+            font-size: 2rem;
+            color: #00796B; /* Dark teal color for headers */
         }
 
         .content p {
-            font-size: 24px;
-            color: #555;
-            max-width: 700px;
-            line-height: 1.6;
-        }
-
-        .mission-vision {
-            font-size: 24px;
+            font-size: 1.1rem;
             color: #555;
             max-width: 800px;
             margin-top: 20px;
+            line-height: 1.8;
         }
 
-        .mission-vision h2 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .mission-vision p {
-            font-size: 20px;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
+        /* Footer */
         .footer {
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             background-color: #00796B; /* Teal footer background */
             color: white;
-            font-size: 14px;
         }
 
-        /* Responsive design for mobile */
-        @media (max-width: 768px) {
-            .page-title {
-                font-size: 36px;
-                margin-bottom: 15px;
-            }
+        .footer p {
+            font-size: 0.9rem;
+        }
 
-            .content p {
-                font-size: 18px;
-                padding: 0 10px;
-            }
-
+        /* Media Queries for responsiveness */
+        @media screen and (max-width: 768px) {
             .menu-container {
-                flex-direction: column;
-                gap: 15px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
             .menu-button {
+                padding: 15px;
                 font-size: 16px;
-                padding: 10px 20px;
-                width: 100%;
             }
 
             .content {
-                padding: 30px 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .page-title {
-                font-size: 28px;
-                margin-bottom: 10px;
+                padding: 20px;
             }
 
-            .content p {
-                font-size: 16px;
+            .logo-section h1 {
+                font-size: 2.5rem;
             }
 
-            .menu-button {
-                padding: 8px 15px;
+            .logo {
+                width: 120px;
             }
         }
     </style>
