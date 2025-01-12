@@ -20,19 +20,19 @@
             width: 100%;
             background-color: #00796B; /* Dark teal for the top bar */
             color: white;
-            padding: 12px 0; /* Adjusted padding */
+            padding: 10px 0; /* Adjusted padding */
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 100;
+            flex-direction: row; /* Horizontal layout for menu */
         }
 
         .menu-container {
             display: flex;
-            gap: 12px; /* Reduced gap for compactness */
-            overflow-x: auto;
-            white-space: nowrap;
-            padding: 6px 0; /* Reduced padding */
+            flex-direction: row; /* Horizontal layout for menu items */
+            gap: 12px; /* Space between the menu items */
+            padding: 10px 0; /* Padding inside the menu bar */
         }
 
         .menu-button {
@@ -45,6 +45,7 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
             white-space: nowrap;
+            text-align: center;
         }
 
         .menu-button:hover {
@@ -54,29 +55,7 @@
         .menu-button.disabled {
             background-color: #B0BEC5; /* Disabled state color */
             cursor: not-allowed;
-        }
-
-        /* Logo Section in Body */
-        .logo-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 60px;
-            background-color: #ffffff; /* White background for logo section */
-        }
-
-        .logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-            opacity: 0.8;
-        }
-
-        .logo-section h1 {
-            font-size: 3rem;
-            color: #00796B; /* Teal color for the header */
-            margin-top: 0;
+            color: #78909C; /* Lighter color for disabled button */
         }
 
         /* Content Section */
@@ -92,9 +71,14 @@
             border-top: 2px solid #00796B; /* Subtle border for separation */
         }
 
+        .content h1 {
+            font-size: 2.5rem;
+            color: #00796B; /* Dark teal color for header */
+        }
+
         .content h2 {
             font-size: 2rem;
-            color: #00796B; /* Dark teal color for headers */
+            color: #00796B; /* Dark teal color for sub-headers */
         }
 
         .content p {
@@ -120,25 +104,30 @@
         /* Media Queries for responsiveness */
         @media screen and (max-width: 768px) {
             .menu-container {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
+                display: flex;
+                flex-direction: row; /* Ensure horizontal layout on smaller screens */
+                gap: 10px; /* Reduced gap between menu items */
+                justify-content: center; /* Center the menu items */
             }
 
             .menu-button {
-                padding: 15px;
-                font-size: 16px;
+                padding: 10px 18px; /* Adjusted padding for mobile */
+                font-size: 16px; /* Adjusted font size for mobile */
             }
 
             .content {
-                padding: 20px;
+                padding: 20px; /* Reduced padding on smaller screens */
             }
 
-            .logo-section h1 {
-                font-size: 2.5rem;
+            .content h1 {
+                font-size: 2rem; /* Adjusted title font size for smaller screens */
             }
+        }
 
-            .logo {
-                width: 120px;
+        @media screen and (max-width: 480px) {
+            .menu-button {
+                padding: 8px 15px; /* Further adjusted padding for mobile */
+                font-size: 14px; /* Further reduced font size for mobile */
             }
         }
     </style>
@@ -147,10 +136,9 @@
 
     <!-- Top Navigation Bar -->
     <div class="top-bar">
-        <img src="logo-small-placeholder.png" alt="Logo" class="small-logo">
         <div class="menu-container">
-            <button class="menu-button" onclick="window.location.href='index.html'">Home</button>
-            <button class="menu-button disabled">About</button>
+            <button class="menu-button disabled">Home</button> <!-- Disabled Home Button -->
+            <button class="menu-button disabled">About</button> <!-- Disabled About Button -->
             <button class="menu-button" onclick="window.location.href='services.html'">Services</button>
             <button class="menu-button" onclick="window.location.href='contacts.html'">Contacts</button>
             <button class="menu-button" onclick="window.location.href='address.html'">Address</button>
