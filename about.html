@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pisces Marketing Solutions</title>
+    <title>About Us - Pisces Marketing Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
@@ -11,8 +9,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
-            color: #333333; /* Dark gray for text */
-            background-color: #F5F5F5; /* Light gray for background */
+            background-color: #65AFFF; /* Light blue background */
+            color: #333333; /* Dark gray text */
             box-sizing: border-box;
             overflow-x: hidden; /* Prevent horizontal scrolling */
             height: 100%;
@@ -22,7 +20,7 @@
         /* Navigation Bar */
         .top-bar {
             width: 100%;
-            background-color: #4A4A8A; /* Muted blue */
+            background-color: #274060; /* Dark blue background */
             color: #FFFFFF;
             display: flex;
             justify-content: space-between;
@@ -36,8 +34,8 @@
 
         .menu-container {
             display: flex;
+            gap: 15px;
             justify-content: flex-start; /* Keep buttons aligned to the left */
-            gap: 10px;
             overflow-x: auto; /* Allow horizontal scrolling for menu items */
             width: 100%;
         }
@@ -48,7 +46,7 @@
             color: #FFFFFF;
             padding: 8px 15px;
             border-radius: 30px;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -59,7 +57,7 @@
 
         .menu-button:hover {
             background-color: #FFFFFF;
-            color: #4A4A8A;
+            color: #274060; /* Light blue color when hovered */
         }
 
         /* Hero Section */
@@ -71,7 +69,7 @@
             height: 70vh;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, #4A4A8A 50%, #7373A3 100%);
+            background: linear-gradient(135deg, #274060 50%, #4A5C72 100%);
             color: #FFFFFF;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
@@ -119,7 +117,7 @@
         .footer {
             text-align: center;
             padding: 15px;
-            background-color: #4A4A8A;
+            background-color: #274060; /* Dark blue footer */
             color: #FFFFFF;
             font-size: 0.9rem;
         }
@@ -127,12 +125,15 @@
         /* Buttons for smaller devices */
         @media screen and (max-width: 768px) {
             .menu-container {
+                justify-content: center;
+                gap: 10px;
+                overflow-x: auto;
                 flex-wrap: nowrap; /* Prevent buttons from wrapping */
-                overflow-x: auto; /* Enable horizontal scroll if buttons overflow */
                 width: 100%;
             }
 
             .menu-button {
+                padding: 8px 12px;
                 font-size: 14px;
                 min-width: 120px; /* Fixed button width */
             }
@@ -169,8 +170,8 @@
     <!-- Top Navigation Bar -->
     <div class="top-bar">
         <div class="menu-container">
-            <button class="menu-button disabled" onclick="window.location.href='#'">Home</button>
-            <button class="menu-button" onclick="window.location.href='about.html'">About</button>
+            <button class="menu-button" onclick="window.location.href='index.html'">Home</button>
+            <button class="menu-button disabled">About</button>
             <button class="menu-button" onclick="window.location.href='services.html'">Services</button>
             <button class="menu-button" onclick="window.location.href='contacts.html'">Contacts</button>
             <button class="menu-button" onclick="window.location.href='address.html'">Address</button>
@@ -180,13 +181,16 @@
 
     <!-- Hero Section -->
     <div class="logo-section">
-        <img src="logo-placeholder.png" alt="Pisces Logo" class="logo">
+        <img src="https://via.placeholder.com/150" alt="Pisces Logo" class="logo">
         <h1>Pisces Marketing Solutions</h1>
         <p>Your trusted partner in expanding your reach and connecting with new markets.</p>
     </div>
 
     <!-- Content Section -->
     <div class="content">
+        <h2>Our Mission and Vision</h2>
+        <p>Our mission is to drive growth and success for our clients by seamlessly integrating marketing and sales strategies. We are dedicated to delivering innovative solutions that attract, engage, and convert leads. We aim to empower businesses to achieve measurable results and sustainable growth.</p>
+        <p>To be the leading force in revolutionizing the marketing and sales landscape by creating meaningful connections between companies. We envision a future where every business, regardless of size, has access to cutting-edge strategies and tools to achieve exceptional growth, customer loyalty, and global recognition.</p>
         <h2>Welcome to Pisces Marketing Solutions</h2>
         <p>
             At Pisces Marketing Solutions, we specialize in strategic partnerships, connecting businesses with new opportunities. 
