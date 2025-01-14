@@ -4,182 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pisces Marketing Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* General styles for the whole website */
+        /* General Styles */
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            color: #000000; /* Black text for readability */
-            background-color: #FFFFFF; /* White background */
-            height: 100%;
+            font-family: 'Inter', sans-serif;
+            color: #333333; /* Dark gray for text */
+            background-color: #F5F5F5; /* Light gray for background */
             box-sizing: border-box;
         }
 
-        /* Top Navigation Bar */
+        /* Navigation Bar */
         .top-bar {
             width: 100%;
-            background-color: #8A2BE2; /* Purple */
-            color: #FFFFFF; /* White text */
-            padding: 15px 0;
+            background-color: #4A4A8A; /* Muted blue */
+            color: #FFFFFF;
             display: flex;
-            justify-content: center; /* Center the items horizontally */
-            align-items: center; /* Vertically center items */
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .menu-container {
             display: flex;
-            gap: 20px;
-            overflow-x: auto; /* Allow horizontal scrolling on mobile */
-            white-space: nowrap; /* Prevent line breaks between buttons */
-            padding: 0 10px;
+            gap: 15px;
         }
 
         .menu-button {
-            background-color: #40E0D0; /* Teal/Cyan */
-            border: none;
-            padding: 10px 20px;
-            color: #FFFFFF; /* White text */
-            font-size: 18px;
+            background-color: transparent;
+            border: 2px solid #FFFFFF;
+            color: #FFFFFF;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .menu-button:hover {
-            background-color: #20B2AA; /* Greenish Blue */
+            background-color: #FFFFFF;
+            color: #4A4A8A;
         }
 
-        .menu-button.disabled {
-            background-color: #333333; /* Dark Gray */
-            cursor: not-allowed;
-        }
-
-        /* Logo Section */
+        /* Hero Section */
         .logo-section {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 80vh; /* Adjusted height */
+            height: 70vh;
             text-align: center;
-            padding: 0 20px; /* Padding for small screens */
+            padding: 20px;
+            background: linear-gradient(135deg, #4A4A8A 50%, #7373A3 100%);
+            color: #FFFFFF;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
         .logo {
-            width: 180px; /* Larger logo size */
+            width: 150px;
             height: auto;
             margin-bottom: 20px;
         }
 
-        /* Title styling */
         .logo-section h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: #FFD700; /* Yellow/Gold */
-            margin-top: 20px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 10px 0;
         }
 
-        /* Subtitle */
         .logo-section p {
-            font-size: 1.5rem;
-            color: #FFFFFF; /* White text */
-            background-color: #8A2BE2; /* Purple background */
-            padding: 10px 20px;
-            border-radius: 10px;
-            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 500px;
         }
 
         /* Content Section */
         .content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 50px;
-            background-color: #FFFFFF; /* White background */
-            color: #000000; /* Black text */
-            min-height: 20vh; /* Reduced height */
+            padding: 40px 20px;
+            color: #333333;
         }
 
         .content h2 {
             font-size: 2rem;
-            color: #8A2BE2; /* Purple text */
             margin-bottom: 15px;
         }
 
         .content p {
-            font-size: 1.2rem;
-            max-width: 800px;
+            font-size: 1.1rem;
             line-height: 1.6;
+            max-width: 800px;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 10px;
-            background-color: #8A2BE2; /* Purple */
-            color: #FFFFFF; /* White text */
-        }
-
-        .footer p {
+            padding: 15px;
+            background-color: #4A4A8A;
+            color: #FFFFFF;
             font-size: 0.9rem;
-            margin: 0;
         }
 
-        /* Media Queries for responsiveness */
+        /* Buttons for smaller devices */
         @media screen and (max-width: 768px) {
             .menu-container {
-                gap: 15px; /* Reduced gap between buttons */
-                padding: 0 20px; /* Padding for mobile */
-                align-items: center; /* Center buttons horizontally */
-                overflow-x: auto; /* Allow horizontal scrolling on mobile */
-                width: 100%; /* Make sure the menu takes up full width */
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
             }
 
             .menu-button {
-                padding: 12px 20px;
-                font-size: 16px;
-            }
-
-            .logo-section {
-                height: auto; /* Allow the logo section to adjust height */
-                padding: 20px;
-            }
-
-            .logo {
-                width: 150px; /* Smaller logo on mobile */
-                margin-bottom: 15px; /* Adjust margin for smaller screens */
+                width: 100%;
+                text-align: center;
+                font-size: 14px;
             }
 
             .logo-section h1 {
-                font-size: 2.5rem; /* Slightly smaller title */
-                margin-top: 10px;
-                margin-bottom: 10px;
+                font-size: 2rem;
             }
 
             .logo-section p {
-                font-size: 1.2rem; /* Adjusted subtitle font size */
-            }
-
-            .content {
-                padding: 20px; /* Less padding for smaller screens */
+                font-size: 1rem;
             }
 
             .content h2 {
-                font-size: 1.5rem; /* Smaller heading */
+                font-size: 1.5rem;
             }
 
             .content p {
-                font-size: 1rem; /* Smaller paragraph text */
-            }
-
-            .footer p {
-                font-size: 0.8rem; /* Smaller footer text */
+                font-size: 1rem;
             }
         }
     </style>
@@ -189,7 +152,7 @@
     <!-- Top Navigation Bar -->
     <div class="top-bar">
         <div class="menu-container">
-            <button class="menu-button disabled">Home</button> <!-- Home Button Disabled -->
+            <button class="menu-button disabled" onclick="window.location.href='#'">Home</button>
             <button class="menu-button" onclick="window.location.href='about.html'">About</button>
             <button class="menu-button" onclick="window.location.href='services.html'">Services</button>
             <button class="menu-button" onclick="window.location.href='contacts.html'">Contacts</button>
@@ -197,26 +160,25 @@
         </div>
     </div>
 
-    <!-- Logo Section -->
+    <!-- Hero Section -->
     <div class="logo-section">
-        <img src="logo-placeholder.png" alt="Pisces Logo" class="logo"> <!-- Pisces Logo -->
+        <img src="logo-placeholder.png" alt="Pisces Logo" class="logo">
         <h1>Pisces Marketing Solutions</h1>
-        <p>Your trusted partner in marketing</p>
+        <p>Your trusted partner in expanding your reach and connecting with new markets.</p>
     </div>
 
     <!-- Content Section -->
     <div class="content">
         <h2>Welcome to Pisces Marketing Solutions</h2>
         <p>
-            Pisces Marketing Solutions specializes in connecting clients and acting as the representative of your company. 
-            We bring your services to new markets, expanding your reach and helping your business grow. 
-            Partner with us to discover the difference that strategic marketing can make.
+            At Pisces Marketing Solutions, we specialize in strategic partnerships, connecting businesses with new opportunities. 
+            Let us help you grow your reach and make meaningful connections in your industry.
         </p>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        <p>Designed with love & passion for Pisces enthusiasts</p>
+        <p>&copy; 2025 Pisces Marketing Solutions. Designed with care for modern businesses.</p>
     </div>
 
 </body>
