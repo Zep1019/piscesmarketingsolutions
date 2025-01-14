@@ -4,101 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Pisces Marketing Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* General styles for the whole website */
+        /* General Styles */
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #65AFFF;
-            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: #65AFFF; /* Light blue background */
+            color: #333333; /* Dark gray text */
             box-sizing: border-box;
         }
 
-        /* Top Navigation Bar */
+        /* Navigation Bar */
         .top-bar {
             width: 100%;
-            background-color: #274060; /* Pisces-themed dark color */
-            color: white;
-            padding: 20px 0;
+            background-color: #274060; /* Dark blue background */
+            color: #FFFFFF;
             display: flex;
-            justify-content: center;  /* Center the items horizontally */
-            align-items: center;      /* Vertically center items */
-            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .menu-container {
             display: flex;
-            gap: 30px;
-            overflow-x: auto; /* Allow horizontal scrolling on mobile */
-            white-space: nowrap; /* Prevent line breaks between buttons */
-            padding: 0 10px; /* Add some padding for mobile */
+            gap: 15px;
         }
 
         .menu-button {
-            background-color: #335C81;
-            border: none;
-            padding: 12px 25px;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
+            background-color: transparent;
+            border: 2px solid #FFFFFF;
+            color: #FFFFFF;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         .menu-button:hover {
-            background-color: #4A5C72; /* Lighter shade for hover */
-            transform: scale(1.05); /* Scale button slightly on hover */
+            background-color: #FFFFFF;
+            color: #274060;
         }
 
-        .menu-button.disabled {
-            background-color: #333;
-            cursor: not-allowed;
-        }
-
-        /* Content section */
-        .content {
+        /* Hero Section */
+        .logo-section {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 70vh;
             text-align: center;
-            padding: 60px 20px;
-            background-color: #65AFFF;
-            min-height: 70vh;
-            box-sizing: border-box;
+            padding: 20px;
+            background: linear-gradient(135deg, #274060 50%, #4A5C72 100%);
+            color: #FFFFFF;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
-        /* Pisces Icon */
-        .pisces-icon {
+        .logo {
             width: 150px;
             height: auto;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        /* Page title styling */
-        .page-title {
-            font-size: 3.5rem;
             margin-bottom: 20px;
-            color: #2E3B4E;
-            text-transform: uppercase;
         }
 
-        /* Mission and Vision Section */
-        .mission-vision {
-            font-size: 1.3rem;
-            color: #555;
-            max-width: 900px;
-            margin-top: 20px;
-            line-height: 1.8;
+        .logo-section h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 10px 0;
         }
 
-        .mission-vision h2 {
-            font-size: 2.2rem;
-            color: #1E2A38;
+        .logo-section p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 500px;
+        }
+
+        /* Content Section */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            color: #333333;
+        }
+
+        .content h2 {
+            font-size: 2rem;
             margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
         }
 
         /* Footer */
@@ -106,42 +110,37 @@
             text-align: center;
             padding: 15px;
             background-color: #274060;
-            color: white;
+            color: #FFFFFF;
+            font-size: 0.9rem;
         }
 
-        .footer p {
-            font-size: 1rem;
-        }
-
-        /* Media Queries for responsiveness */
+        /* Buttons for smaller devices */
         @media screen and (max-width: 768px) {
             .menu-container {
-                flex-direction: row;  /* Keep items horizontal */
-                justify-content: space-evenly;  /* Evenly space the items */
-                padding: 0 10px; /* Padding for mobile */
-                overflow-x: auto;  /* Horizontal scroll if needed */
+                justify-content: center;
+                gap: 10px;
+                overflow-x: auto;
             }
 
             .menu-button {
-                padding: 15px 25px;
-                font-size: 18px;
+                padding: 8px 12px;
+                font-size: 14px;
             }
 
-            .content {
-                padding: 30px 15px;  /* Less padding for smaller screens */
+            .logo-section h1 {
+                font-size: 2rem;
             }
 
-            .page-title {
-                font-size: 2.5rem;
+            .logo-section p {
+                font-size: 1rem;
             }
 
-            .mission-vision {
-                font-size: 1.1rem;
-                margin: 20px 0;
+            .content h2 {
+                font-size: 1.5rem;
             }
 
-            .pisces-icon {
-                width: 130px;  /* Smaller icon on mobile */
+            .content p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -151,8 +150,8 @@
     <!-- Top Navigation Bar -->
     <div class="top-bar">
         <div class="menu-container">
-            <button class="menu-button" onclick="window.location.href='index.html'">Home</button> 
-            <button class="menu-button disabled">About</button> <!-- Disabled About Button -->
+            <button class="menu-button" onclick="window.location.href='index.html'">Home</button>
+            <button class="menu-button disabled">About</button>
             <button class="menu-button" onclick="window.location.href='services.html'">Services</button>
             <button class="menu-button" onclick="window.location.href='contacts.html'">Contacts</button>
             <button class="menu-button" onclick="window.location.href='address.html'">Address</button>
@@ -160,23 +159,23 @@
         </div>
     </div>
 
+    <!-- Hero Section -->
+    <div class="logo-section">
+        <img src="https://via.placeholder.com/150" alt="Pisces Logo" class="logo">
+        <h1>Pisces Marketing Solutions</h1>
+        <p>Your trusted partner in expanding your reach and connecting with new markets.</p>
+    </div>
+
     <!-- Content Section -->
     <div class="content">
-        <img src="https://via.placeholder.com/150" alt="Pisces Icon" class="pisces-icon">
-        <h1 class="page-title">Our Mission and Vision</h1>
-
-        <div class="mission-vision">
-            <h2>Our Mission</h2>
-            <p>Our mission is to drive growth and success for our clients by seamlessly integrating marketing and sales strategies. We are dedicated to delivering innovative solutions that attract, engage, and convert leads. We aim to empower businesses to achieve measurable results and sustainable growth.</p>
-
-            <h2>Our Vision</h2>
-            <p>To be the leading force in revolutionizing the marketing and sales landscape by creating meaningful connections between companies. We envision a future where every business, regardless of size, has access to cutting-edge strategies and tools to achieve exceptional growth, customer loyalty, and global recognition.</p>
-        </div>
+        <h2>Our Mission and Vision</h2>
+        <p>Our mission is to drive growth and success for our clients by seamlessly integrating marketing and sales strategies. We are dedicated to delivering innovative solutions that attract, engage, and convert leads. We aim to empower businesses to achieve measurable results and sustainable growth.</p>
+        <p>To be the leading force in revolutionizing the marketing and sales landscape by creating meaningful connections between companies. We envision a future where every business, regardless of size, has access to cutting-edge strategies and tools to achieve exceptional growth, customer loyalty, and global recognition.</p>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        <p>Designed with love & water for Pisces enthusiasts</p>
+        <p>&copy; 2025 Pisces Marketing Solutions. Designed with care for modern businesses.</p>
     </div>
 
 </body>
