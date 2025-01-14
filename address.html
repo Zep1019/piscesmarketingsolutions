@@ -60,38 +60,6 @@
             color: #4A4A8A;
         }
 
-        /* Hero Section */
-        .logo-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 70vh;
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(135deg, #4A4A8A 50%, #7373A3 100%);
-            color: #FFFFFF;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-
-        .logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .logo-section h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin: 10px 0;
-        }
-
-        .logo-section p {
-            font-size: 1.2rem;
-            font-weight: 400;
-            max-width: 500px;
-        }
-
         /* Content Section */
         .content {
             display: flex;
@@ -113,6 +81,11 @@
             max-width: 800px;
         }
 
+        .content .address {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -120,36 +93,6 @@
             background-color: #4A4A8A;
             color: #FFFFFF;
             font-size: 0.9rem;
-        }
-
-        /* Buttons for smaller devices */
-        @media screen and (max-width: 768px) {
-            .menu-container {
-                flex-wrap: nowrap; /* Prevent buttons from wrapping */
-                overflow-x: auto; /* Enable horizontal scroll if buttons overflow */
-                width: 100%;
-            }
-
-            .menu-button {
-                font-size: 14px;
-                min-width: 120px; /* Fixed button width */
-            }
-
-            .logo-section h1 {
-                font-size: 2rem;
-            }
-
-            .logo-section p {
-                font-size: 1rem;
-            }
-
-            .content h2 {
-                font-size: 1.5rem;
-            }
-
-            .content p {
-                font-size: 1rem;
-            }
         }
     </style>
 </head>
@@ -159,32 +102,20 @@
     <div class="top-bar">
         <div class="menu-container">
             <button class="menu-button" onclick="window.location.href='index.html'">Home</button>
-            <button class="menu-button" onclick="window.location.href='about.html'">About</button>
-            <button class="menu-button" onclick="window.location.href='services.html'">Services</button>
             <button class="menu-button" onclick="window.location.href='contacts.html'">Contacts</button>
             <button class="menu-button disabled">Address</button>
-            <button class="menu-button" onclick="window.location.href='email.html'">Email Address</button>
         </div>
-    </div>
-
-    <!-- Hero Section -->
-    <div class="logo-section">
-        <img src="logo-placeholder.png" alt="Pisces Logo" class="logo">
-        <h1>Pisces Marketing Solutions</h1>
-        <p>Your trusted partner in expanding your reach and connecting with new markets.</p>
     </div>
 
     <!-- Content Section -->
     <div class="content">
         <h2>Our Address</h2>
-        <p>We are located at:</p>
-        <p><strong>123 Pisces Street, Water City, Oceanic State, 98765</strong></p>
-        <p>Feel free to visit us during office hours or contact us via email or phone for any inquiries.</p>
+        <p class="address">11 Harold St., Fairfield NSW, 2165</p>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        <p>Designed with love & water for Pisces enthusiasts</p>
+        <p>&copy; Pisces Marketing Solutions</p>
     </div>
 
 </body>
