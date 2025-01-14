@@ -14,6 +14,9 @@
             color: #333333; /* Dark gray for text */
             background-color: #F5F5F5; /* Light gray for background */
             box-sizing: border-box;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            height: 100%;
+            width: 100%;
         }
 
         /* Navigation Bar */
@@ -33,22 +36,22 @@
 
         .menu-container {
             display: flex;
-            justify-content: center; /* Center buttons horizontally */
-            gap: 15px;
-            flex-wrap: wrap; /* Allow the buttons to wrap on smaller screens */
+            justify-content: flex-start; /* Keep buttons aligned to the left */
+            gap: 10px;
+            overflow-x: auto; /* Allow horizontal scrolling for menu items */
         }
 
         .menu-button {
             background-color: transparent;
             border: 2px solid #FFFFFF;
             color: #FFFFFF;
-            padding: 10px 20px;
+            padding: 8px 15px;
             border-radius: 30px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            min-width: 150px; /* Consistent button width */
+            min-width: 120px; /* Fixed button size */
             text-align: center;
         }
 
@@ -121,10 +124,15 @@
 
         /* Buttons for smaller devices */
         @media screen and (max-width: 768px) {
+            .menu-container {
+                flex-wrap: nowrap; /* Prevent buttons from wrapping */
+                overflow-x: auto; /* Enable horizontal scroll if buttons overflow */
+                width: 100%;
+            }
+
             .menu-button {
-                padding: 10px 20px;
-                font-size: 16px;
-                min-width: 150px; /* Keep button width consistent on mobile */
+                font-size: 14px;
+                min-width: 120px; /* Fixed button width */
             }
 
             .logo-section h1 {
