@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
-            color: #333333; /* Dark gray for text */
+            color: #2E3B4E; /* Dark gray for text */
             background-color: #F5F5F5; /* Light gray for background */
             box-sizing: border-box;
             overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -22,7 +22,7 @@
         /* Navigation Bar */
         .top-bar {
             width: 100%;
-            background-color: #4A4A8A; /* Muted blue */
+            background-color: #274060; /* Dark blue */
             color: #FFFFFF;
             display: flex;
             justify-content: space-between;
@@ -57,7 +57,12 @@
 
         .menu-button:hover {
             background-color: #FFFFFF;
-            color: #4A4A8A;
+            color: #274060;
+        }
+
+        .menu-button.disabled {
+            background-color: #333; /* Dark gray for disabled button */
+            cursor: not-allowed;
         }
 
         /* Hero Section */
@@ -69,7 +74,7 @@
             height: 70vh;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, #4A4A8A 50%, #7373A3 100%);
+            background: linear-gradient(135deg, #274060 50%, #4A5C72 100%);
             color: #FFFFFF;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
@@ -99,7 +104,7 @@
             align-items: center;
             text-align: center;
             padding: 40px 20px;
-            color: #333333;
+            color: #2E3B4E; /* Dark gray for text */
         }
 
         .content h2 {
@@ -117,7 +122,7 @@
         .footer {
             text-align: center;
             padding: 15px;
-            background-color: #4A4A8A;
+            background-color: #274060;
             color: #FFFFFF;
             font-size: 0.9rem;
         }
