@@ -33,22 +33,22 @@
 
         .menu-container {
             display: flex;
-            flex-wrap: wrap; /* Allow the buttons to wrap */
-            gap: 10px;
-            justify-content: center; /* Center buttons on mobile */
+            justify-content: center; /* Center buttons horizontally */
+            gap: 15px;
+            flex-wrap: wrap; /* Allow the buttons to wrap on smaller screens */
         }
 
         .menu-button {
             background-color: transparent;
             border: 2px solid #FFFFFF;
             color: #FFFFFF;
-            padding: 8px 15px;
+            padding: 10px 20px;
             border-radius: 30px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            min-width: 120px; /* Ensure buttons have consistent width */
+            min-width: 150px; /* Consistent button width */
             text-align: center;
         }
 
@@ -122,9 +122,9 @@
         /* Buttons for smaller devices */
         @media screen and (max-width: 768px) {
             .menu-button {
-                padding: 8px 12px;
-                font-size: 14px;
-                min-width: 100px; /* Adjust button width on mobile */
+                padding: 10px 20px;
+                font-size: 16px;
+                min-width: 150px; /* Keep button width consistent on mobile */
             }
 
             .logo-section h1 {
@@ -154,7 +154,8 @@
             <button class="menu-button" onclick="window.location.href='about.html'">About</button>
             <button class="menu-button" onclick="window.location.href='services.html'">Services</button>
             <button class="menu-button" onclick="window.location.href='contacts.html'">Contacts</button>
-            <button class="menu-button" onclick="window.location.href='clients.html'">Our Clients</button>
+            <button class="menu-button" onclick="window.location.href='address.html'">Address</button>
+            <button class="menu-button" onclick="window.location.href='email.html'">Email Address</button>
         </div>
     </div>
 
