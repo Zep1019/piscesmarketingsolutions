@@ -92,14 +92,16 @@
             max-width: 500px;
         }
 
-        /* Content Section */
+        /* Content Section with Diagonal Background */
         .content {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 40px 20px;
-            color: #333333;
+            background: linear-gradient(135deg, #4A4A8A 50%, #7373A3 100%);
+            color: #FFFFFF;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
         .content h2 {
