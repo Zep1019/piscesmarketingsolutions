@@ -92,21 +92,14 @@
             max-width: 500px;
         }
 
-        /* Content Section with Diagonal Background (Now moved to top of the content) */
+        /* Content Section */
         .content {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 40px 20px;
-            background-color: #FFFFFF; /* White background */
-        }
-
-        .content .diagonal-background {
-            width: 100%;
-            height: 50vh;
-            background: linear-gradient(135deg, #4A4A8A 50%, #7373A3 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            color: #333333;
         }
 
         .content h2 {
@@ -118,33 +111,6 @@
             font-size: 1.1rem;
             line-height: 1.6;
             max-width: 800px;
-        }
-
-        /* Logo and Title Section above the Content */
-        .logo-title-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .logo-title-section .logo {
-            width: 120px;
-            height: auto;
-            margin-bottom: 15px;
-        }
-
-        .logo-title-section h1 {
-            font-size: 2rem;
-            margin: 5px 0;
-        }
-
-        .logo-title-section p {
-            font-size: 1.2rem;
-            font-weight: 400;
-            max-width: 500px;
-            color: #F0F0F0;
         }
 
         /* Footer */
@@ -184,14 +150,6 @@
             .content p {
                 font-size: 1rem;
             }
-
-            .logo-title-section h1 {
-                font-size: 1.8rem;
-            }
-
-            .logo-title-section p {
-                font-size: 1rem;
-            }
         }
     </style>
 </head>
@@ -205,29 +163,29 @@
             <button class="menu-button" onclick="window.location.href='services.html'">Services</button>
             <button class="menu-button" onclick="window.location.href='contacts.html'">Contacts</button>
             <button class="menu-button" onclick="window.location.href='address.html'">Address</button>
-            <button class="menu-button disabled">Email Address</button>
+            <button class="menu-button" onclick="window.location.href='email.html'">Email Address</button>
         </div>
     </div>
 
-    <!-- Logo and Title Section -->
-    <div class="logo-title-section">
-        <img src="logo.png" alt="Pisces Marketing Solutions Logo" class="logo">
-        <h1>Email Us</h1>
-        <p>If you have any inquiries or feedback, feel free to email us at:</p>
+    <!-- Hero Section -->
+    <div class="logo-section">
+        <img src="logo-placeholder.png" alt="Pisces Logo" class="logo">
+        <h1>Pisces Marketing Solutions</h1>
+        <p>Your trusted partner in expanding your reach and connecting with new markets.</p>
     </div>
 
     <!-- Content Section -->
     <div class="content">
-        <!-- Diagonal Background on top of content -->
-        <div class="diagonal-background"></div>
-        
-        <h2><strong>support@piscesinfo.com</strong></h2>
-        <p>We will get back to you as soon as possible. Thank you for reaching out to us!</p>
+        <h2>Welcome to Pisces Marketing Solutions</h2>
+        <p>
+            At Pisces Marketing Solutions, we specialize in strategic partnerships, connecting businesses with new opportunities. 
+            Let us help you grow your reach and make meaningful connections in your industry.
+        </p>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        <p>Designed with love & water for Pisces enthusiasts</p>
+        <p>&copy; 2025 Pisces Marketing Solutions. Designed with care for modern businesses.</p>
     </div>
 
 </body>
