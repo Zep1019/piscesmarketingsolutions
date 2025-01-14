@@ -20,7 +20,7 @@
             width: 100%;
             background-color: #274060; /* Pisces-themed dark color */
             color: white;
-            padding: 15px 0;
+            padding: 20px 0;
             display: flex;
             justify-content: center;  /* Center the items horizontally */
             align-items: center;      /* Vertically center items */
@@ -29,7 +29,7 @@
 
         .menu-container {
             display: flex;
-            gap: 20px;
+            gap: 30px;
             overflow-x: auto; /* Allow horizontal scrolling on mobile */
             white-space: nowrap; /* Prevent line breaks between buttons */
             padding: 0 10px; /* Add some padding for mobile */
@@ -38,16 +38,18 @@
         .menu-button {
             background-color: #335C81;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             color: white;
-            font-size: 18px;
+            font-size: 20px;
+            font-weight: bold;
             cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .menu-button:hover {
             background-color: #4A5C72; /* Lighter shade for hover */
+            transform: scale(1.05); /* Scale button slightly on hover */
         }
 
         .menu-button.disabled {
@@ -62,82 +64,84 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 50px;
+            padding: 60px 20px;
             background-color: #65AFFF;
             min-height: 70vh;
+            box-sizing: border-box;
         }
 
         /* Pisces Icon */
         .pisces-icon {
             width: 150px;
             height: auto;
-            margin-bottom: 30px;
-            opacity: 0.8;
+            margin-bottom: 40px;
+            opacity: 0.9;
         }
 
         /* Page title styling */
         .page-title {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
             color: #2E3B4E;
+            text-transform: uppercase;
         }
 
-        /* Services Section */
+        /* Mission and Vision Section */
         .mission-vision {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             color: #555;
-            max-width: 800px;
+            max-width: 900px;
             margin-top: 20px;
             line-height: 1.8;
         }
 
         .mission-vision h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #1E2A38;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background-color: #274060;
             color: white;
         }
 
         .footer p {
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         /* Media Queries for responsiveness */
         @media screen and (max-width: 768px) {
             .menu-container {
                 flex-direction: row;  /* Keep items horizontal */
-                justify-content: flex-start;  /* Align items to the start */
+                justify-content: space-evenly;  /* Evenly space the items */
                 padding: 0 10px; /* Padding for mobile */
                 overflow-x: auto;  /* Horizontal scroll if needed */
             }
 
             .menu-button {
-                padding: 15px;
-                font-size: 16px;
+                padding: 15px 25px;
+                font-size: 18px;
             }
 
             .content {
-                padding: 20px;  /* Less padding for smaller screens */
+                padding: 30px 15px;  /* Less padding for smaller screens */
             }
 
             .page-title {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .mission-vision {
-                font-size: 1rem;
+                font-size: 1.1rem;
                 margin: 20px 0;
             }
 
             .pisces-icon {
-                width: 120px;  /* Smaller icon on mobile */
+                width: 130px;  /* Smaller icon on mobile */
             }
         }
     </style>
@@ -158,6 +162,7 @@
 
     <!-- Content Section -->
     <div class="content">
+        <img src="https://via.placeholder.com/150" alt="Pisces Icon" class="pisces-icon">
         <h1 class="page-title">Our Mission and Vision</h1>
 
         <div class="mission-vision">
