@@ -33,7 +33,9 @@
 
         .menu-container {
             display: flex;
-            gap: 15px;
+            flex-wrap: wrap; /* Allow the buttons to wrap */
+            gap: 10px;
+            justify-content: center; /* Center buttons on mobile */
         }
 
         .menu-button {
@@ -46,6 +48,8 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            min-width: 120px; /* Ensure buttons have consistent width */
+            text-align: center;
         }
 
         .menu-button:hover {
@@ -117,15 +121,10 @@
 
         /* Buttons for smaller devices */
         @media screen and (max-width: 768px) {
-            .menu-container {
-                justify-content: center; /* Centering the menu horizontally on mobile */
-                gap: 10px;
-                overflow-x: auto; /* Allow horizontal scrolling for menu items */
-            }
-
             .menu-button {
                 padding: 8px 12px;
                 font-size: 14px;
+                min-width: 100px; /* Adjust button width on mobile */
             }
 
             .logo-section h1 {
