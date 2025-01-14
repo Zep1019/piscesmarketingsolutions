@@ -32,6 +32,9 @@
             justify-content: center;
             align-items: center;
             gap: 15px;
+            overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+            white-space: nowrap;
+            padding: 0 10px;
         }
 
         .menu-button {
@@ -63,7 +66,7 @@
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 10px;
             text-transform: uppercase;
         }
@@ -101,10 +104,10 @@
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             .menu-container {
-                flex-wrap: nowrap;
+                gap: 10px;
+                justify-content: start; /* Align menu buttons horizontally */
                 overflow-x: auto;
                 white-space: nowrap;
-                justify-content: start;
                 padding: 0 10px;
             }
 
@@ -114,7 +117,7 @@
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .hero p {
