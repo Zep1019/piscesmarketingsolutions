@@ -115,6 +115,33 @@
             max-width: 800px;
         }
 
+        /* Logo and Title Section above the Content */
+        .logo-title-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-title-section .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .logo-title-section h1 {
+            font-size: 2rem;
+            margin: 5px 0;
+        }
+
+        .logo-title-section p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 500px;
+            color: #F0F0F0;
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -152,6 +179,14 @@
             .content p {
                 font-size: 1rem;
             }
+
+            .logo-title-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .logo-title-section p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -169,14 +204,17 @@
         </div>
     </div>
 
+    <!-- Logo and Title Section -->
+    <div class="logo-title-section">
+        <img src="logo.png" alt="Pisces Marketing Solutions Logo" class="logo">
+        <h1>Email Us</h1>
+        <p>If you have any inquiries or feedback, feel free to email us at:</p>
+    </div>
+
     <!-- Content Section -->
     <div class="content">
-        <h1 class="page-title">Email Us</h1>
-        <div class="mission-vision">
-            <p>If you have any inquiries or feedback, feel free to email us at the following email address:</p>
-            <h2><strong>support@piscesinfo.com</strong></h2>
-            <p>We will get back to you as soon as possible. Thank you for reaching out to us!</p>
-        </div>
+        <h2><strong>support@piscesinfo.com</strong></h2>
+        <p>We will get back to you as soon as possible. Thank you for reaching out to us!</p>
     </div>
 
     <!-- Footer -->
