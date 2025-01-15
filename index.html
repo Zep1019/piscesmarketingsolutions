@@ -11,8 +11,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
-            color: #333333; /* Dark gray for text */
-            background-color: #F5F5F5; /* Light gray for background */
+            color: #2E3B4E; /* Dark gray for text */
+            background-color: #E6F9F2; /* Light sea-green */
             box-sizing: border-box;
             overflow-x: hidden; /* Prevent horizontal scrolling */
             height: 100%;
@@ -22,7 +22,7 @@
         /* Navigation Bar */
         .top-bar {
             width: 100%;
-            background-color: #4A4A8A; /* Muted blue */
+            background-color: #6A5ACD; /* Soft purple */
             color: #FFFFFF;
             display: flex;
             justify-content: space-between;
@@ -36,7 +36,7 @@
 
         .menu-container {
             display: flex;
-            justify-content: flex-start; /* Keep buttons aligned to the left */
+            justify-content: flex-start;
             gap: 10px;
             overflow-x: auto; /* Allow horizontal scrolling for menu items */
         }
@@ -51,13 +51,13 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            min-width: 120px; /* Fixed button size */
+            min-width: 120px;
             text-align: center;
         }
 
         .menu-button:hover {
             background-color: #FFFFFF;
-            color: #4A4A8A;
+            color: #6A5ACD;
         }
 
         /* Hero Section */
@@ -69,7 +69,7 @@
             height: 70vh;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, #4A4A8A 50%, #7373A3 100%);
+            background: linear-gradient(135deg, #6A5ACD 50%, #7FFFD4 100%); /* Purple to sea-green */
             color: #FFFFFF;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
@@ -99,7 +99,7 @@
             align-items: center;
             text-align: center;
             padding: 40px 20px;
-            color: #333333;
+            color: #2E3B4E; /* Dark gray */
         }
 
         .content h2 {
@@ -117,7 +117,7 @@
         .footer {
             text-align: center;
             padding: 15px;
-            background-color: #4A4A8A;
+            background-color: #6A5ACD; /* Soft purple */
             color: #FFFFFF;
             font-size: 0.9rem;
         }
@@ -125,14 +125,14 @@
         /* Buttons for smaller devices */
         @media screen and (max-width: 768px) {
             .menu-container {
-                flex-wrap: nowrap; /* Prevent buttons from wrapping */
-                overflow-x: auto; /* Enable horizontal scroll if buttons overflow */
+                flex-wrap: nowrap;
+                overflow-x: auto;
                 width: 100%;
             }
 
             .menu-button {
                 font-size: 14px;
-                min-width: 120px; /* Fixed button width */
+                min-width: 120px;
             }
 
             .logo-section h1 {
