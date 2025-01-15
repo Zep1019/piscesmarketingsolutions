@@ -11,8 +11,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
-            color: #333333; /* Dark gray for text */
-            background-color: #F5F5F5; /* Light gray for background */
+            color: #000000; /* Black text for better readability */
+            background-color: #FFFFFF; /* White background */
             box-sizing: border-box;
             overflow-x: hidden; /* Prevent horizontal scrolling */
             height: 100%;
@@ -22,13 +22,13 @@
         /* Navigation Bar */
         .top-bar {
             width: 100%;
-            background-color: #4A4A8A; /* Muted blue */
+            background: linear-gradient(135deg, #D500F9 0%, #00E676 100%); /* Brighter purple (#D500F9) to brighter sea green (#00E676) */
             color: #FFFFFF;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 15px 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More prominent shadow */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -36,8 +36,8 @@
 
         .menu-container {
             display: flex;
-            justify-content: flex-start; /* Keep buttons aligned to the left */
-            gap: 10px;
+            justify-content: flex-start;
+            gap: 15px;
             overflow-x: auto; /* Allow horizontal scrolling for menu items */
         }
 
@@ -45,19 +45,20 @@
             background-color: transparent;
             border: 2px solid #FFFFFF;
             color: #FFFFFF;
-            padding: 8px 15px;
+            padding: 10px 18px;
             border-radius: 30px;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            min-width: 120px; /* Fixed button size */
+            min-width: 120px;
             text-align: center;
         }
 
         .menu-button:hover {
             background-color: #FFFFFF;
-            color: #4A4A8A;
+            color: #D500F9;
+            transform: translateY(-3px); /* Lift effect */
         }
 
         /* Hero Section */
@@ -68,26 +69,25 @@
             align-items: center;
             height: 70vh;
             text-align: center;
-            padding: 20px;
-            background: linear-gradient(135deg, #4A4A8A 50%, #7373A3 100%);
-            color: #FFFFFF;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            padding: 40px;
+            color: #000000;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
         }
 
         .logo {
-            width: 150px;
+            width: 180px;
             height: auto;
             margin-bottom: 20px;
         }
 
         .logo-section h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin: 10px 0;
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 15px 0;
         }
 
         .logo-section p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: 400;
             max-width: 500px;
         }
@@ -98,34 +98,59 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 40px 20px;
-            color: #333333;
+            padding: 50px 20px;
+            color: #000000; /* Black text for content */
         }
 
         .content h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
         .content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            max-width: 800px;
-        }
-
-        /* Address Styling */
-        .address {
-            font-weight: 600;
             font-size: 1.2rem;
+            line-height: 1.7;
+            max-width: 800px;
+            color: #333333;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 15px;
-            background-color: #4A4A8A;
+            padding: 20px;
+            background: linear-gradient(135deg, #D500F9 0%, #00E676 100%); /* Matching gradient for footer with brighter purple and sea green */
             color: #FFFFFF;
-            font-size: 0.9rem;
+            font-size: 1rem;
+        }
+
+        /* Buttons for smaller devices */
+        @media screen and (max-width: 768px) {
+            .menu-container {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                width: 100%;
+            }
+
+            .menu-button {
+                font-size: 14px;
+                min-width: 120px;
+            }
+
+            .logo-section h1 {
+                font-size: 2rem;
+            }
+
+            .logo-section p {
+                font-size: 1rem;
+            }
+
+            .content h2 {
+                font-size: 1.8rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
