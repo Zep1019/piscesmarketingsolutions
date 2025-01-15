@@ -22,7 +22,7 @@
         /* Navigation Bar */
         .top-bar {
             width: 100%;
-            background-color: #8A2BE2; /* Brighter purple */
+            background: linear-gradient(135deg, #8A2BE2 50%, #32CD32 100%); /* Gradient from purple to sea-green */
             color: #FFFFFF;
             display: flex;
             justify-content: space-between;
@@ -102,19 +102,7 @@
             text-align: center;
             padding: 50px 20px;
             color: #2E3B4E;
-        }
-
-        .content .top-half {
-            background-color: #F5F5F5; /* Light gray for first half */
-            padding: 40px;
-            width: 100%;
-        }
-
-        .content .bottom-half {
-            background-color: #32CD32; /* Bright sea-green for second half */
-            padding: 40px;
-            width: 100%;
-            color: #FFFFFF;
+            background-color: #FFFFFF; /* White background for content */
         }
 
         .content h2 {
@@ -133,7 +121,7 @@
         .footer {
             text-align: center;
             padding: 20px;
-            background-color: #8A2BE2; /* Brighter purple */
+            background-color: #32CD32; /* Sea-green */
             color: #FFFFFF;
             font-size: 1rem;
         }
@@ -152,19 +140,19 @@
             }
 
             .logo-section h1 {
-                font-size: 2.5rem;
-            }
-
-            .logo-section p {
-                font-size: 1.2rem;
-            }
-
-            .content h2 {
                 font-size: 2rem;
             }
 
+            .logo-section p {
+                font-size: 1rem;
+            }
+
+            .content h2 {
+                font-size: 1.8rem;
+            }
+
             .content p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
         }
     </style>
@@ -192,20 +180,11 @@
 
     <!-- Content Section -->
     <div class="content">
-        <div class="top-half">
-            <h2>Welcome to Pisces Marketing Solutions</h2>
-            <p>
-                At Pisces Marketing Solutions, we specialize in strategic partnerships, connecting businesses with new opportunities. 
-                Let us help you grow your reach and make meaningful connections in your industry.
-            </p>
-        </div>
-        <div class="bottom-half">
-            <h2>Explore Our Services</h2>
-            <p>
-                Whether you're a startup or a seasoned enterprise, we tailor our marketing strategies to suit your needs. 
-                Our team is dedicated to helping you succeed in today's competitive market.
-            </p>
-        </div>
+        <h2>Welcome to Pisces Marketing Solutions</h2>
+        <p>
+            At Pisces Marketing Solutions, we specialize in strategic partnerships, connecting businesses with new opportunities. 
+            Let us help you grow your reach and make meaningful connections in your industry.
+        </p>
     </div>
 
     <!-- Footer -->
