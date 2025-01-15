@@ -102,7 +102,19 @@
             text-align: center;
             padding: 50px 20px;
             color: #2E3B4E;
-            background: linear-gradient(to bottom, #F0FFF0 50%, #8A2BE2 50%); /* Color change halfway */
+        }
+
+        .content .top-half {
+            background-color: #F5F5F5; /* Light gray for first half */
+            padding: 40px;
+            width: 100%;
+        }
+
+        .content .bottom-half {
+            background-color: #32CD32; /* Bright sea-green for second half */
+            padding: 40px;
+            width: 100%;
+            color: #FFFFFF;
         }
 
         .content h2 {
@@ -180,11 +192,20 @@
 
     <!-- Content Section -->
     <div class="content">
-        <h2>Welcome to Pisces Marketing Solutions</h2>
-        <p>
-            At Pisces Marketing Solutions, we specialize in strategic partnerships, connecting businesses with new opportunities. 
-            Let us help you grow your reach and make meaningful connections in your industry.
-        </p>
+        <div class="top-half">
+            <h2>Welcome to Pisces Marketing Solutions</h2>
+            <p>
+                At Pisces Marketing Solutions, we specialize in strategic partnerships, connecting businesses with new opportunities. 
+                Let us help you grow your reach and make meaningful connections in your industry.
+            </p>
+        </div>
+        <div class="bottom-half">
+            <h2>Explore Our Services</h2>
+            <p>
+                Whether you're a startup or a seasoned enterprise, we tailor our marketing strategies to suit your needs. 
+                Our team is dedicated to helping you succeed in today's competitive market.
+            </p>
+        </div>
     </div>
 
     <!-- Footer -->
